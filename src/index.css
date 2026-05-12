@@ -1,26 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-primary: #6C63FF;
-  --color-secondary: #00C853;
-  --color-dark: #0F172A;
-  --color-header: #1E293B;
-  --color-bg: #0F172A;
-  --color-border: #334155;
-  --color-slate-800: #1E293B;
-  --color-slate-700: #334155;
-  --color-slate-400: #94A3B8;
-  --color-slate-100: #F1F5F9;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-whatsapp: #22c55e;
+  --color-whatsapp-dark: #16a34a;
+  --shadow-bento: 0 8px 30px rgba(0,0,0,0.04);
+  --shadow-bento-dark: 0 8px 30px rgba(0,0,0,0.2);
 }
 
 @layer base {
   body {
-    @apply font-sans bg-[#0F172A] text-slate-100 transition-colors duration-300;
+    @apply font-sans transition-colors duration-300;
   }
 }
 
-.whatsapp-shadow {
-  box-shadow: 0 1px .5px rgba(0,0,0,.13);
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.glass-morphism {
+  @apply backdrop-blur-xl bg-white/70 dark:bg-zinc-900/70 border border-white/20 dark:border-zinc-800/50;
 }

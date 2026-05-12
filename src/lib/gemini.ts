@@ -2,7 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
-export type CaptionStyle = 'funny' | 'inspirational' | 'short' | 'witty' | 'cool' | 'emotional';
+export type CaptionStyle = 'funny' | 'romantic' | 'motivational' | 'sad' | 'aesthetic';
 
 export async function generateCaptions(description: string, style: CaptionStyle): Promise<string[]> {
   try {
